@@ -1,0 +1,15 @@
+{% extends 'movies/base_layout.html' %}
+
+
+{% block layout_block %}
+<div class="container">
+<form method="post" action="{% url 'signup' %}">
+  {% csrf_token %}
+
+  {{form.as_p}}
+
+<button type="submit">signup</button>
+
+</form>
+</div>
+{% endblock %}
